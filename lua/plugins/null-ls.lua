@@ -1,20 +1,15 @@
 return {
   "jose-elias-alvarez/null-ls.nvim",
-  config = function()
-
-local null_ls = require "null-ls"
-
-local formatting = null_ls.builtins.formatting
-local lint = null_ls.builtins.diagnostics
-
-local sources = {
-   formatting.stylua,
-}
-
-null_ls.setup {
-   debug = true,
-   sources = sources,
-}
-
-  end
+  dependendcies = { 'VonHeikemen/lsp-zero.nvim' },
+  event = { "BufReadPre", "BufNewFile" },
+  opts = function()
+    local nls = require("null-ls")
+    return {
+      root_dir = require("null-ls.utils").root_pattern(".null-ls-root", ".neoconf.json", "Makefile", ".git"),
+      sources = {
+        nls.builtins.formatting.stylua,
+        nls.builtins.formatting.alejandra
+      },
+    }
+  end,
 }
