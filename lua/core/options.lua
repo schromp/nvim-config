@@ -2,6 +2,7 @@ opt = vim.opt
 
 --colorscheme
 --vim.cmd[[colorscheme tokyonight]]
+vim.cmd("set nofixendofline")
 
 -- line numbers
 opt.relativenumber = true
@@ -46,4 +47,7 @@ opt.splitbelow = true
 opt.timeoutlen = 300
 
 -- cursor
---opt.guicursor = ""
+opt.guicursor = ""
+
+vim.opt.listchars = {eol = '↵'}
+vim.opt.list = true

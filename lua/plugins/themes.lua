@@ -2,7 +2,7 @@ return {
   {
     "navarasu/onedark.nvim",
     config = function ()
-      vim.cmd([[colorscheme onedark]])
+      -- vim.cmd([[colorscheme onedark]])
     end
   },
   {
@@ -14,8 +14,14 @@ return {
   },
   {
     "catppuccin/nvim",
-    lazy = true,
+    lazy = false,
     name = "catppuccin",
+    config = function ()
+      vim.cmd([[colorscheme catppuccin-frappe]])
+      require('catppuccin').setup({
+        flavour = "frappe"
+      })
+    end
   },
   {
     "rebelot/kanagawa.nvim",
