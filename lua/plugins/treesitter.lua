@@ -1,12 +1,13 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  enabled = true,
   dependencies = {
-    "vmware-archive/salt-vim"
+    -- "vmware-archive/salt-vim"
   },
   config = function()
     require 'nvim-treesitter.configs'.setup {
       -- A list of parser names, or "all" (the five listed parsers should always be installed)
-      ensure_installed = { "c", "lua", "vim", "vimdoc", "markdown", "markdown_inline", "python", "css", "yaml"},
+      ensure_installed = { "c", "lua", "vim", "vimdoc", "markdown", "markdown_inline", "python", "css", "yaml", "go" },
 
       -- Install parsers synchronously (only applied to `ensure_installed`)
       sync_install = false,

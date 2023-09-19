@@ -49,5 +49,5 @@ opt.timeoutlen = 300
 -- cursor
 opt.guicursor = ""
 
-vim.opt.listchars = {eol = '↵'}
+vim.opt.listchars = {eol = '↵', tab = '• '}
 vim.opt.list = true
