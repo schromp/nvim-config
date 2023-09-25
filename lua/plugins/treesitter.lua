@@ -5,7 +5,9 @@ return {
     -- "vmware-archive/salt-vim"
   },
   config = function()
+    -- vim.filetype.add({extensions = {sls = "yaml"}})
     require 'nvim-treesitter.configs'.setup {
+
       -- A list of parser names, or "all" (the five listed parsers should always be installed)
       ensure_installed = { "c", "lua", "vim", "vimdoc", "markdown", "markdown_inline", "python", "css", "yaml", "go" },
 
@@ -36,5 +38,9 @@ return {
         additional_vim_regex_highlighting = false,
       },
     }
+
+    -- local parsers = require "nvim-treesitter.parsers"
+    -- local parser_config = parsers.get_parser_configs()
+    -- parser_config.sls.filetype_to_parsername = "yaml"
   end
 }

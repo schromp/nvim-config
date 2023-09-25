@@ -12,6 +12,7 @@ return {
     { 'hrsh7th/cmp-buffer' },
     { 'saadparwaiz1/cmp_luasnip' }, -- Required
     { 'elkowar/yuck.vim' },
+    { 'vmware-archive/salt-vim' },
   },
   config = function()
     local lsp = require('lsp-zero').preset({})
