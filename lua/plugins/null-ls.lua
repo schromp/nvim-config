@@ -10,6 +10,7 @@ return {
 				nls.builtins.formatting.stylua,
 				nls.builtins.formatting.alejandra,
 				nls.builtins.formatting.gofmt,
+				nls.builtins.formatting.shellcheck,
 			},
 		}
 	end,

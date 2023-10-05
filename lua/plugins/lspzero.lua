@@ -28,7 +28,7 @@ return {
 
     -- When you don't have mason.nvim installed
     -- You'll need to list the servers installed in your system
-    lsp.setup_servers({ 'nil_ls', 'jedi_language_server', 'lua_ls', 'yamlls', 'phpactor', 'gopls'})
+    lsp.setup_servers({ 'nixd', 'jedi_language_server', 'lua_ls', 'phpactor', 'gopls'})
 
     -- (Optional) Configure lua language server for neovim
     require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
