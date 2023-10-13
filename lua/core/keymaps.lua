@@ -26,8 +26,8 @@ k.set("n", "<C-down>", ":resize -5<cr>")
 --k.set("n", "<C-l>", ":wincmd l<CR>")
 
 -- scrolling
-k.set("n", "<C-d>", "<C-d>zz")
-k.set("n", "<C-u>", "<C-u>zz")
+-- k.set("n", "<C-d>", "<C-d>zz")
+-- k.set("n", "<C-u>", "<C-u>zz")
 
 k.set("n", "L", ":tabn<CR>")
 k.set("n", "H", ":tabp<CR>")
