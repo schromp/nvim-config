@@ -31,7 +31,7 @@ opt.termguicolors = false
 --opt.background = "dark"
 -- opt.signcolumn = "yes" -- show sign column so that text doesnt shift (?)
 
-opt.scrolloff = 8
+opt.scrolloff = 0
 
 -- backspace
 opt.backspace = "indent,eol,start"

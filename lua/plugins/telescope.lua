@@ -6,6 +6,7 @@ return {
 		build = "make",
 		config = function()
 			require("telescope").load_extension("fzf")
+			require("telescope").load_extension("projects")
 		end,
 	},
 	cmd = "Telescope",
@@ -15,6 +16,7 @@ return {
 		{ "<leader>fs", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Find Files" },
 		{ "<leader>fu", "<cmd>Telescope grep_string<cr>", desc = "Find Files" },
 		{ "<leader>fk", "<cmd>Telescope command_history<cr>", desc = "Command History" },
+		{ "<leader>fp", "<cmd>Telescope projects<cr>", desc = "Command History" },
 	},
 	config = function()
 		require("telescope").setup({

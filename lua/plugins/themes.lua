@@ -29,7 +29,6 @@ return {
     config = function()
       require("kanagawa").setup({
         transparent = true,
-        theme = "wave",
         colors = {
           theme = {
             all = {

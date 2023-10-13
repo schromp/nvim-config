@@ -1,5 +1,6 @@
 return {
 	"nathom/filetype.nvim",
+	enabled = false,
 	config = function()
 		vim.g.did_load_filetypes = 1
 
