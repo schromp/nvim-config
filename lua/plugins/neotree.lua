@@ -1,9 +1,14 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
-  enabled = false,
-  -- keys = {
-  --   { "<leader>e", "<cmd>NeoTreeShowToggle<cr>", desc = "Toggle Neotree" },
-  -- },
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+	  "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+    "MunifTanjim/nui.nvim",
+  },
+  enabled = true,
+  keys = {
+    { "<leader>e", "<cmd>Neotree toggle<cr>", desc = "Toggle Neotree" },
+  },
   default_component_configs = {
     indent = {
       with_expanders = true, -- if nil and file nesting is enabled, will enable expanders

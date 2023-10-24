@@ -7,9 +7,9 @@ return {
 		{ "neovim/nvim-lspconfig" }, -- Required
 
 		-- Autocompletion
-		{ "hrsh7th/nvim-cmp" }, -- Required
-		{ "hrsh7th/cmp-nvim-lsp" }, -- Required
-		{ "hrsh7th/cmp-path" }, -- Required
+		{ "hrsh7th/nvim-cmp" },       -- Required
+		{ "hrsh7th/cmp-nvim-lsp" },   -- Required
+		{ "hrsh7th/cmp-path" },       -- Required
 		{ "hrsh7th/cmp-buffer" },
 		{ "saadparwaiz1/cmp_luasnip" }, -- Required
 		{ "elkowar/yuck.vim" },
@@ -31,7 +31,7 @@ return {
 
 		-- When you don't have mason.nvim installed
 		-- You'll need to list the servers installed in your system
-		lsp.setup_servers({ "nixd", "jedi_language_server", "lua_ls", "phpactor", "gopls", "tsserver"})
+		lsp.setup_servers({ "nixd", "jedi_language_server", "lua_ls", "phpactor", "gopls", "tsserver" })
 
 		-- (Optional) Configure lua language server for neovim
 		require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
@@ -48,12 +48,12 @@ return {
 				{ name = "path" },
 				{ name = "nvim_lsp" },
 				{ name = "nvim_lua" },
-				{ name = "buffer", keyword_length = 3 },
+				{ name = "buffer",  keyword_length = 3 },
 				{ name = "luasnip", keyword_length = 2 },
 			},
 			mapping = {
-				["<C-f>"] = cmp_action.luasnip_jump_forward(),
-				["<C-b>"] = cmp_action.luasnip_jump_backward(),
+				["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+				["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
 				["<CR>"] = cmp.mapping.confirm({ select = false }),
 			},
 			window = {

@@ -19,25 +19,28 @@ return {
 			desc = "Toggle Harpoon Menu",
 		},
 		{
-			"<leader>hn",
+			"<leader>h1",
 			function()
-				require("harpoon.ui").nav_next()
+				require("harpoon.ui").nav_file(1)
 			end,
-			desc = "Goto next Harpoon file",
 		},
 		{
-			"<leader>hp",
+			"<leader>h2",
 			function()
-				require("harpoon.ui").nav_prev()
+				require("harpoon.ui").nav_file(2)
 			end,
-			desc = "Goto prev Harpoon file",
 		},
 		{
-			"<leader>ht",
+			"<leader>h3",
 			function()
-				require("harpoon.tmux").gotoTerminal(1)
+				require("harpoon.ui").nav_file(3)
 			end,
-			desc = "Open Tmux Terminal with Harpoon",
+		},
+		{
+			"<leader>h4",
+			function()
+				require("harpoon.ui").nav_file(4)
+			end,
 		},
 	},
 	config = function()

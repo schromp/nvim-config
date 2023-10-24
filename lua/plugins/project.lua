@@ -1,12 +1,3 @@
--- return {
--- 	"ahmedkhalf/project.nvim",
--- 	enabled = false,
--- 	event = "VeryLazy",
--- 	opts = {},
--- 	config = function (_, opts)
--- 		require("project_nvim").setup(opts)
--- 	end
--- }
 return {
   "coffebar/neovim-project",
   opts = {
