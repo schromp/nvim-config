@@ -25,13 +25,13 @@ return {
 			vim.keymap.set({ "n", "x" }, "gq", function()
 				vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
 			end, opts)
-			vim.keymap.set("n", "ca", vim.lsp.buf.code_action, opts)
+			vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, opts)
 			vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
 		end)
 
 		-- When you don't have mason.nvim installed
 		-- You'll need to list the servers installed in your system
-		lsp.setup_servers({ "nixd", "jedi_language_server", "lua_ls", "phpactor", "gopls", "tsserver" })
+		lsp.setup_servers({ "nixd", "pyright", "lua_ls", "phpactor", "gopls", "tsserver" })
 
 		-- (Optional) Configure lua language server for neovim
 		require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())

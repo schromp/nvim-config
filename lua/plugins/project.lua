@@ -5,6 +5,7 @@ return {
       "~/Repos/indi/*",
       "~/Repos/cruises/*",
       "~/Repos/non-essential/*",
+      "~/Repos/*",
       "~/.config/*",
     },
   },

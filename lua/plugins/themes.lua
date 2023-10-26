@@ -24,6 +24,12 @@ return {
     end
   },
   {
+    "sainnhe/gruvbox-material"
+  },
+  {
+    "AlexvZyl/nordic.nvim"
+  },
+  {
     "rebelot/kanagawa.nvim",
     lazy = false,
     config = function()
