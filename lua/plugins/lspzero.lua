@@ -26,7 +26,7 @@ return {
 				vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
 			end, opts)
 			vim.keymap.set("n", "ca", vim.lsp.buf.code_action, opts)
-			vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
+			vim.keymap.set('n', '<space>cr', vim.lsp.buf.rename, opts)
 		end)
 
 		-- When you don't have mason.nvim installed
