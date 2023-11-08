@@ -10,7 +10,8 @@ return {
       nls.builtins.formatting.stylua,
       nls.builtins.formatting.alejandra,
       nls.builtins.formatting.gofmt,
-      nls.builtins.formatting.yq,
+      -- nls.builtins.formatting.yq,
+      nls.builtins.formatting.prettier,
       nls.builtins.diagnostics.saltlint,
       nls.builtins.diagnostics.yamllint,
     }
