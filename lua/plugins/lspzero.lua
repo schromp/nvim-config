@@ -7,9 +7,9 @@ return {
 		{ "neovim/nvim-lspconfig" }, -- Required
 
 		-- Autocompletion
-		{ "hrsh7th/nvim-cmp" },       -- Required
-		{ "hrsh7th/cmp-nvim-lsp" },   -- Required
-		{ "hrsh7th/cmp-path" },       -- Required
+		{ "hrsh7th/nvim-cmp" }, -- Required
+		{ "hrsh7th/cmp-nvim-lsp" }, -- Required
+		{ "hrsh7th/cmp-path" }, -- Required
 		{ "hrsh7th/cmp-buffer" },
 		{ "saadparwaiz1/cmp_luasnip" }, -- Required
 		{ "elkowar/yuck.vim" },
@@ -26,7 +26,7 @@ return {
 				vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
 			end, opts)
 			vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, opts)
-			vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
+			vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
 		end)
 
 		-- When you don't have mason.nvim installed
@@ -34,7 +34,14 @@ return {
 		lsp.setup_servers({ "nixd", "pyright", "lua_ls", "phpactor", "gopls", "tsserver" })
 
 		-- (Optional) Configure lua language server for neovim
-		require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
+		require("lspconfig").texlab.setup({
+			build = {
+				args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
+				executable = "latexmk",
+				forwardSearchAfter = false,
+				onSave = true,
+			},
+		})
 
 		lsp.setup()
 
@@ -48,7 +55,7 @@ return {
 				{ name = "path" },
 				{ name = "nvim_lsp" },
 				{ name = "nvim_lua" },
-				{ name = "buffer",  keyword_length = 3 },
+				{ name = "buffer", keyword_length = 3 },
 				{ name = "luasnip", keyword_length = 2 },
 			},
 			mapping = {

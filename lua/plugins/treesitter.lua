@@ -24,6 +24,8 @@ return {
 				"typescript",
 				"bash",
 				"dockerfile",
+				"http",
+				"json",
 			},
 
 			-- Install parsers synchronously (only applied to `ensure_installed`)
