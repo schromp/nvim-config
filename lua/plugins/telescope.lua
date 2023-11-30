@@ -24,6 +24,9 @@ return {
         find_files = {
           hidden = true,
         },
+        colorscheme = {
+          enable_preview = true
+        },
       },
       extensions = {
         -- file_browser = {},
