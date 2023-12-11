@@ -4,6 +4,7 @@ return {
 	build = ":TSUpdate",
 	dependencies = {
 		-- "vmware-archive/salt-vim"
+    "mrjones2014/nvim-ts-rainbow",
 	},
 	config = function()
 		-- vim.filetype.add({extensions = {sls = "yaml"}})
@@ -19,7 +20,8 @@ return {
 				"markdown_inline",
 				"python",
 				"css",
-				"yaml",
+        "scss",
+				-- "yaml",
 				"go",
 				"typescript",
 				"bash",
