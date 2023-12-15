@@ -14,6 +14,7 @@ return {
 		{ "saadparwaiz1/cmp_luasnip" }, -- Required
 		{ "elkowar/yuck.vim" },
 		{ "vmware-archive/salt-vim" },
+		{ "folke/neodev.nvim" },
 	},
 	config = function()
 		local lsp = require("lsp-zero").preset({})
@@ -25,13 +26,13 @@ return {
 			vim.keymap.set({ "n", "x" }, "gq", function()
 				vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
 			end, opts)
-			vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, opts)
-			vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
+			vim.keymap.set("n", "<space>la", vim.lsp.buf.code_action, opts)
+			vim.keymap.set("n", "<space>lr", vim.lsp.buf.rename, opts)
 		end)
 
 		-- When you don't have mason.nvim installed
 		-- You'll need to list the servers installed in your system
-		lsp.setup_servers({ "nixd", "pyright", "lua_ls", "phpactor", "gopls", "tsserver", "cssls"})
+		lsp.setup_servers({ "nixd", "pyright", "lua_ls", "phpactor", "gopls", "tsserver", "cssls" })
 
 		-- (Optional) Configure lua language server for neovim
 		require("lspconfig").texlab.setup({
@@ -57,6 +58,7 @@ return {
 				{ name = "nvim_lua" },
 				{ name = "buffer", keyword_length = 3 },
 				{ name = "luasnip", keyword_length = 2 },
+				{ name = "cody" },
 			},
 			mapping = {
 				["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
@@ -69,5 +71,8 @@ return {
 				documentation = cmp.config.window.bordered(),
 			},
 		})
+
+    vim.api.nvim_set_hl(0, "CmpItemKindCody", { fg = "Red" })
+
 	end,
 }
