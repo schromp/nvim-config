@@ -32,11 +32,7 @@ return {
 
 		-- When you don't have mason.nvim installed
 		-- You'll need to list the servers installed in your system
-<<<<<<< HEAD
 		lsp.setup_servers({ "nixd", "pyright", "lua_ls", "phpactor", "gopls", "tsserver", "cssls", "clangd"})
-=======
-		lsp.setup_servers({ "nixd", "pyright", "lua_ls", "phpactor", "gopls", "tsserver", "cssls" })
->>>>>>> 21aec5db31b5309a1ff8d312d959f3e3dce2ccbb
 
 		-- (Optional) Configure lua language server for neovim
 		require("lspconfig").texlab.setup({
