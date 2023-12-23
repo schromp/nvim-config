@@ -13,7 +13,7 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.softtabstop = 2
-opt.smartindent = true
+-- opt.smartindent = true -- # WARN: this messes up nix {} placement
 
 -- line wrapping
 opt.wrap = false
