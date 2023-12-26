@@ -3,7 +3,7 @@ return {
   dependencies = {
     "MunifTanjim/nui.nvim",
   },
-  enabled = false,
+  enabled = true,
   opts = {
     input = {
       -- Set to false to disable the vim.ui.input implementation
@@ -103,7 +103,6 @@ return {
       nui = {
         position = "50%",
         size = nil,
-        relative = "cursor",
         border = {
           style = "rounded",
         },
