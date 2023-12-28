@@ -28,6 +28,7 @@ return {
 		vim.g.rainbow_delimiters = { highlight = highlight }
 		require("ibl").setup({
 			scope = {
+        enabled = false,
 				highlight = highlight,
 				show_start = false,
 			},
