@@ -1,5 +1,6 @@
 return {
   "coffebar/neovim-project",
+  disable = true,
   opts = {
     projects = { -- define project roots
       "~/Repos/indi/*",
