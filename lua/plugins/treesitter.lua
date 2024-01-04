@@ -22,7 +22,6 @@ return {
 					"python",
 					"css",
 					"scss",
-					-- "yaml",
 					"go",
 					"typescript",
 					"bash",
@@ -39,12 +38,15 @@ return {
 				auto_install = true,
 
 				-- List of parsers to ignore installing (for "all")
-				ignore_install = { "javascript" },
+				ignore_install = { "javascript", "yaml"},
 
 				---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
 				-- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
 
-				indent = { enable = true },
+				indent = {
+					enable = true,
+					-- disable = { "yaml" },
+				},
 
 				highlight = {
 					enable = true,
@@ -58,6 +60,25 @@ return {
 					-- Using this option may slow down your editor, and you may see some duplicate highlights.
 					-- Instead of true it can also be a list of languages
 					additional_vim_regex_highlighting = false,
+				},
+
+				incremental_selection = {
+					enable = true,
+					keymaps = {
+						init_selection = "<C-space>",
+						node_incremental = "<C-space>",
+						scope_incremental = false,
+						node_decremental = "<bs>",
+					},
+				},
+				textobjects = {
+					move = {
+						enable = true,
+						goto_next_start = { ["]f"] = "@function.outer", ["]c"] = "@class.outer" },
+						goto_next_end = { ["]F"] = "@function.outer", ["]C"] = "@class.outer" },
+						goto_previous_start = { ["[f"] = "@function.outer", ["[c"] = "@class.outer" },
+						goto_previous_end = { ["[F"] = "@function.outer", ["[C"] = "@class.outer" },
+					},
 				},
 			})
 
