@@ -75,6 +75,8 @@ return {
 				mapping = {
 					["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
 					["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
+					["<Up>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+					["<Down>"] = cmp.mapping.select_next_item(), -- next suggestion
 					["<CR>"] = cmp.mapping.confirm({ select = false }),
 				},
 				window = {
