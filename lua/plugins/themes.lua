@@ -21,6 +21,7 @@ return {
         flavour = "frappe",
         transparent_background = true, -- disables setting the background color.
       })
+      vim.cmd([[colorscheme catppuccin]])
     end
   },
   {
@@ -71,7 +72,6 @@ return {
           }
         end,
       })
-      vim.cmd([[colorscheme kanagawa]])
     end,
   },
 }
