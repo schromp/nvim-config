@@ -44,6 +44,7 @@
         "/Users/lennartkoziollek/.local/share/nvim/lazy/neogit/lua",
         "/Users/lennartkoziollek/.local/share/nvim/lazy/nui.nvim/lua",
         "/Users/lennartkoziollek/.config/nvim/lua",
-        "${3rd}/luv/library"
+        "${3rd}/luv/library",
+        "${3rd}/luassert/library"
     ]
 }
