@@ -20,6 +20,7 @@ return {
 		},
 	},
 	opts = {},
+  lazy = false,
 	config = function(_, opts)
 		-- files
 		require("mini.files").setup(opts)

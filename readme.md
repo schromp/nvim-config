@@ -2,5 +2,4 @@
 
 ## Todo
 
-- Setup Cody (completions, keybinds, ...)
-- Noice for command prompts
+- Marks

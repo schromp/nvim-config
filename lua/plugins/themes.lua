@@ -19,7 +19,7 @@ return {
     config = function()
       require('catppuccin').setup({
         flavour = "macchiato",
-        transparent_background = true, -- disables setting the background color.
+        transparent_background = false, -- disables setting the background color.
       })
       vim.cmd([[colorscheme catppuccin]])
     end
