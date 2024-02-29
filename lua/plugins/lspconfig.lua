@@ -15,7 +15,7 @@ return {
 			local lspconfig = require("lspconfig")
 
 			lspconfig.gopls.setup({})
-			lspconfig.nil_ls.setup({})
+			lspconfig.nixd.setup({})
 			lspconfig.lua_ls.setup({})
 			lspconfig.pyright.setup({})
 			lspconfig.phpactor.setup({})
@@ -23,6 +23,7 @@ return {
 			lspconfig.cssls.setup({})
 			lspconfig.clangd.setup({})
 			lspconfig.emmet_ls.setup({})
+      lspconfig.rust_analyzer.setup({})
 			lspconfig.texlab.setup({
 				build = {
 					args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },

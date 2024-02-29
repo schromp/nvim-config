@@ -1,6 +1,7 @@
 return {
 	"echasnovski/mini.nvim",
 	version = false,
+  lazy = false,
 	keys = {
 		-- { "<leader>fe", "<cmd>lua  },
 		{
@@ -21,9 +22,6 @@ return {
 	opts = {},
   lazy = false,
 	config = function(_, opts)
-		require("mini.pairs").setup()
-		require("mini.surround").setup()
-
 		-- files
 		require("mini.files").setup(opts)
 		local show_dotfiles = true
@@ -48,5 +46,8 @@ return {
 				vim.keymap.set("n", "g.", toggle_dotfiles, { buffer = buf_id })
 			end,
 		})
+
+		require("mini.pairs").setup()
+		require("mini.surround").setup()
 	end,
 }
