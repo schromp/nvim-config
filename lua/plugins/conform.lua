@@ -17,6 +17,7 @@ return {
 			sls = { "saltlint" },
 			yaml = { { "prettierd", "prettier" } },
 			javascript = { { "prettierd", "prettier" } },
+			php = { "php_cs_fixer" },
 		},
 	},
 }
