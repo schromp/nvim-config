@@ -17,3 +17,5 @@ require "core.neovide"
 
 
 require("lazy").setup("plugins")
+
+vim.cmd([[colorscheme onedark]])
