@@ -3,7 +3,7 @@ return {
   dependencies = {
     "MunifTanjim/nui.nvim",
   },
-  enabled = true,
+  enabled = false,
   opts = {
     input = {
       -- Set to false to disable the vim.ui.input implementation
