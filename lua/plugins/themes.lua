@@ -14,7 +14,7 @@ return {
 		config = function()
 			require("catppuccin").setup({
 				flavour = "macchiato",
-				transparent_background = false, -- disables setting the background color.
+				transparent_background = DynConfig.transparent, -- disables setting the background color.
 			})
 		end,
 	},

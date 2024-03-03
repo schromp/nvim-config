@@ -11,6 +11,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+JsonVariables = require "lib.json"
+
 require "core.options"
 require "core.keymaps"
 require "core.neovide"
@@ -18,4 +20,4 @@ require "core.neovide"
 
 require("lazy").setup("plugins")
 
-vim.cmd([[colorscheme onedark]])
+vim.cmd('colorscheme ' .. DynConfig.theme)
