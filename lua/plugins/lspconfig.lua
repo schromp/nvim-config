@@ -2,7 +2,7 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			{ "folke/neodev.nvim" },
+			{ "folke/neodev.nvim", opts = {} },
 			{ "hrsh7th/nvim-cmp" }, -- Required
 			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
 			{ "hrsh7th/cmp-path" }, -- Required
@@ -23,7 +23,7 @@ return {
 			lspconfig.cssls.setup({})
 			lspconfig.clangd.setup({})
 			lspconfig.emmet_ls.setup({})
-      lspconfig.rust_analyzer.setup({})
+			lspconfig.rust_analyzer.setup({})
 			lspconfig.texlab.setup({
 				build = {
 					args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
