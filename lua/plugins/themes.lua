@@ -25,6 +25,25 @@ return {
 		"AlexvZyl/nordic.nvim",
 	},
 	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		config = function()
+			local rpVariant
+			if DynConfig.theme == "rose-pine-dawn" then
+				rpVariant = "dawn"
+			elseif DynConfig.theme == "rose-pine-moon" then
+				rpVariant = "night"
+			elseif DynConfig.theme == "rose-pine-main" then
+				rpVariant = "moon"
+			else
+				rpVariant = "auto"
+			end
+			require("rose-pine").setup({
+				variant = rpVariant,
+			})
+		end,
+	},
+	{
 		"rebelot/kanagawa.nvim",
 		lazy = false,
 		config = function()
