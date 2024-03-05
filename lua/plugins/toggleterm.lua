@@ -5,7 +5,9 @@ return {
 		{ "<C-]>", "<cmd>ToggleTerm<cr>", desc = "Open a terminal" },
 	},
 	config = function()
-		require("toggleterm").setup({})
+		require("toggleterm").setup({
+			direction = "float",
+		})
 
 		function _G.set_terminal_keymaps()
 			local opts = { buffer = 0 }
