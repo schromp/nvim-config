@@ -11,7 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-JsonVariables = require "lib.json"
+JsonVariables = require "lib.dynconfig"
 
 require "core.options"
 require "core.keymaps"
