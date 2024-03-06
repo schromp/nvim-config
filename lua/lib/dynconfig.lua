@@ -9,7 +9,7 @@ local function read_file(path)
     end
 end
 
-local file_content = read_file("config.json")
+local file_content = read_file(vim.fn.stdpath("config") .. "/config.json")
 
 local jsonVariables = {}
 
