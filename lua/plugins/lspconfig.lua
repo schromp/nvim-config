@@ -23,7 +23,7 @@ return {
 			lspconfig.cssls.setup({})
 			lspconfig.clangd.setup({})
 			lspconfig.emmet_ls.setup({})
-      lspconfig.rust_analyzer.setup({})
+			lspconfig.rust_analyzer.setup({})
 			lspconfig.texlab.setup({
 				build = {
 					args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
@@ -63,6 +63,7 @@ return {
 			local cmp = require("cmp")
 
 			require("luasnip.loaders.from_vscode").lazy_load()
+			local luasnip = require("luasnip")
 
 			cmp.setup({
 				sources = {
@@ -84,6 +85,11 @@ return {
 					completeopt = "menu,menuone,noinsert",
 					completion = cmp.config.window.bordered(),
 					documentation = cmp.config.window.bordered(),
+				},
+				snippet = {
+					expand = function(args)
+						luasnip.lsp_expand(args.body)
+					end,
 				},
 			})
 
