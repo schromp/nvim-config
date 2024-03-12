@@ -1,5 +1,3 @@
-local cjson = require("cjson")
-
 local function read_file(path)
     local file = io.open(path, 'r')  -- Open the file in read mode
     if file then
@@ -11,12 +9,12 @@ local function read_file(path)
     end
 end
 
-local file_content = read_file('/home/lk/.config/nvim/config.json')
+local file_content = read_file(vim.fn.stdpath("config") .. "/config.json")
 
 local jsonVariables = {}
 
 if file_content ~= nil then
-    jsonVariables = cjson.decode(file_content)
+    jsonVariables = vim.json.decode(file_content)
 end
 
 DynConfig = {
