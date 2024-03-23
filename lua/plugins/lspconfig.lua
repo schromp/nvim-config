@@ -23,7 +23,8 @@ return {
 			lspconfig.cssls.setup({})
 			lspconfig.clangd.setup({})
 			lspconfig.emmet_ls.setup({})
-			lspconfig.rust_analyzer.setup({})
+      lspconfig.rust_analyzer.setup({})
+			lspconfig.arduino_language_server.setup({})
 			lspconfig.texlab.setup({
 				build = {
 					args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
