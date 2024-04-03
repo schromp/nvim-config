@@ -44,7 +44,7 @@ opt.splitright = true
 opt.splitbelow = true
 
 -- for which key
-opt.timeoutlen = 300
+-- opt.timeoutlen = 300
 
 -- cursor
 --opt.guicursor = ""
