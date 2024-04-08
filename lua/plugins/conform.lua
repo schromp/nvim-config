@@ -16,6 +16,7 @@ return {
 			nix = { "alejandra" },
 			sls = { "saltlint" },
 			yaml = { { "prettierd", "prettier" } },
+			html = { { "prettierd", "prettier" } },
 			javascript = { { "prettierd", "prettier" } },
 			php = { "php_cs_fixer" },
 		},
