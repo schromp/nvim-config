@@ -53,3 +53,5 @@ opt.splitbelow = true
 -- vim.opt.list = true
 
 vim.opt.termguicolors = true
+
+opt.colorcolumn = "72"
