@@ -8,7 +8,7 @@ return {
 			"~/Repos/*",
 			"~/repos/*",
       "~/.config/nvim",
-			"~/repos/bachelorarbeit",
+			"~/repos/bachelorarbeit/*",
 		},
 		last_session_on_startup = true,
 	},
