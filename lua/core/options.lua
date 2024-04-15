@@ -49,7 +49,9 @@ opt.splitbelow = true
 -- cursor
 --opt.guicursor = ""
 
--- vim.opt.listchars = {eol = '↵', tab = '-'}
--- vim.opt.list = true
+vim.opt.listchars = {eol = '↵'}
+vim.opt.list = true
 
 vim.opt.termguicolors = true
+
+opt.colorcolumn = "72"
