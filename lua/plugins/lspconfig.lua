@@ -23,7 +23,14 @@ return {
 			lspconfig.cssls.setup({})
 			lspconfig.clangd.setup({})
 			lspconfig.emmet_ls.setup({})
-      lspconfig.rust_analyzer.setup({})
+			lspconfig.rust_analyzer.setup({
+				inlayHint = {
+					dynamicRegistration = true,
+					resolveSupport = {
+						properties = { "textEdits", "tooltip", "location", "command" },
+					},
+				},
+			})
 			lspconfig.arduino_language_server.setup({})
 			lspconfig.texlab.setup({
 				build = {
