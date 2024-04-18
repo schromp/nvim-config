@@ -18,7 +18,12 @@ return {
 			lspconfig.nixd.setup({})
 			lspconfig.lua_ls.setup({})
 			lspconfig.pyright.setup({})
-			lspconfig.phpactor.setup({})
+			lspconfig.phpactor.setup({
+				init_options = {
+					["language_server_phpstan.enabled"] = true,
+					["language_server_php_cs_fixer.enabled"] = true,
+				},
+			})
 			lspconfig.tsserver.setup({})
 			lspconfig.cssls.setup({})
 			lspconfig.clangd.setup({})
