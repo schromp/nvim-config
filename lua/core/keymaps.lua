@@ -36,3 +36,5 @@ k.set("n", "<leader>h", ":nohlsearch<CR>")
 
 k.set("n", "<leader>ll", ":Lazy<CR>")
 -- k.set("n", "<leader>e", ":Explore<CR>")
+
+k.set("t", "<C-ESC>", "<C-\\><C-n><C-w>h", { silent = true })
