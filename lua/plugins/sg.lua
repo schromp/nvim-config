@@ -8,7 +8,7 @@ return {
 			{ "<leader>cc", "<cmd>CodyToggle<cr>", desc = "Toggle Cody Chat window" },
 		},
     lazy = false,
-    enabled = false,
+    enabled = true,
 		config = function()
 			require("sg").setup({
 				enable_cody = true,
