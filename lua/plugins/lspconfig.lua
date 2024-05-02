@@ -12,48 +12,10 @@ return {
 			{ "vmware-archive/salt-vim" },
 		},
 		config = function()
-			local cmp = require("cmp")
-
-			require("luasnip.loaders.from_vscode").lazy_load()
-			local luasnip = require("luasnip")
-
-			cmp.setup({
-				sources = {
-					{ name = "path" },
-					{ name = "nvim_lsp" },
-					{ name = "nvim_lua" },
-					{ name = "buffer", keyword_length = 3 },
-					{ name = "luasnip", keyword_length = 2 },
-					{ name = "cody" },
-				},
-				mapping = {
-					["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-					["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
-					["<Up>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-					["<Down>"] = cmp.mapping.select_next_item(), -- next suggestion
-					["<CR>"] = cmp.mapping.confirm({ select = false }),
-				},
-				window = {
-					completeopt = "menu,menuone,noinsert",
-					completion = cmp.config.window.bordered(),
-					documentation = cmp.config.window.bordered(),
-				},
-				snippet = {
-					expand = function(args)
-						luasnip.lsp_expand(args.body)
-					end,
-				},
-			})
-
-			vim.api.nvim_set_hl(0, "CmpItemKindCody", { fg = "Red" })
-
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
 			local lspconfig = require("lspconfig")
 
 			lspconfig.gopls.setup({})
 			lspconfig.nixd.setup({
-				capabilities = capabilities,
 				cmd = { "nixd", "--inlay-hints=true" },
 				settings = {
 					nixd = {
@@ -117,6 +79,41 @@ return {
 					vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 				end,
 			})
+
+			local cmp = require("cmp")
+
+			require("luasnip.loaders.from_vscode").lazy_load()
+			local luasnip = require("luasnip")
+
+			cmp.setup({
+				sources = {
+					{ name = "path" },
+					{ name = "nvim_lsp" },
+					{ name = "nvim_lua" },
+					{ name = "buffer", keyword_length = 3 },
+					{ name = "luasnip", keyword_length = 2 },
+					{ name = "cody" },
+				},
+				mapping = {
+					["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+					["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
+					["<Up>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+					["<Down>"] = cmp.mapping.select_next_item(), -- next suggestion
+					["<CR>"] = cmp.mapping.confirm({ select = false }),
+				},
+				window = {
+					completeopt = "menu,menuone,noinsert",
+					completion = cmp.config.window.bordered(),
+					documentation = cmp.config.window.bordered(),
+				},
+				snippet = {
+					expand = function(args)
+						luasnip.lsp_expand(args.body)
+					end,
+				},
+			})
+
+			vim.api.nvim_set_hl(0, "CmpItemKindCody", { fg = "Red" })
 		end,
 	},
 	{
