@@ -19,6 +19,7 @@ return {
 			html = { { "prettierd", "prettier" } },
 			javascript = { { "prettierd", "prettier" } },
 			php = { "php_cs_fixer" },
+			rust = { "rustfmt" },
 		},
 	},
 }
