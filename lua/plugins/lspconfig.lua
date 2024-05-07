@@ -40,7 +40,7 @@ return {
 			lspconfig.cssls.setup({})
 			lspconfig.clangd.setup({})
 			lspconfig.emmet_ls.setup({})
-			lspconfig.rust_analyzer.setup({})
+			-- lspconfig.rust_analyzer.setup({})
 			lspconfig.arduino_language_server.setup({})
 			lspconfig.texlab.setup({
 				build = {
@@ -126,5 +126,13 @@ return {
 		"pmizio/typescript-tools.nvim",
 		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
 		opts = {},
+	},
+	{
+		"mrcjkb/rustaceanvim",
+		version = "^4", -- Recommended
+		lazy = false, -- This plugin is already lazy
+		keys = {
+			{ "<leader>ld", "<cmd>RustLsp renderDiagnostic<cr>", desc = "Render rust diagnostics" },
+		},
 	},
 }
