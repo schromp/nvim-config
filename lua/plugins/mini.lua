@@ -49,5 +49,7 @@ return {
 
 		-- require("mini.pairs").setup()
 		require("mini.surround").setup()
+
+		require("mini.align").setup()
 	end,
 }
