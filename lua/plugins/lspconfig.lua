@@ -10,6 +10,7 @@ return {
 			{ "L3MON4D3/LuaSnip" },
 			{ "saadparwaiz1/cmp_luasnip" }, -- Required
 			{ "vmware-archive/salt-vim" },
+			{ "onsails/lspkind.nvim" },
 		},
 		config = function()
 			local lspconfig = require("lspconfig")
@@ -40,7 +41,7 @@ return {
 			lspconfig.cssls.setup({})
 			lspconfig.clangd.setup({})
 			lspconfig.emmet_ls.setup({})
-			-- lspconfig.rust_analyzer.setup({})
+			lspconfig.rust_analyzer.setup({})
 			lspconfig.arduino_language_server.setup({})
 			lspconfig.texlab.setup({
 				build = {
@@ -84,8 +85,9 @@ return {
 
 			require("luasnip.loaders.from_vscode").lazy_load()
 			local luasnip = require("luasnip")
-
+			local lspkind = require("lspkind")
 			cmp.setup({
+
 				sources = {
 					{ name = "path" },
 					{ name = "nvim_lsp" },
@@ -111,6 +113,16 @@ return {
 						luasnip.lsp_expand(args.body)
 					end,
 				},
+				formatting = {
+					format = lspkind.cmp_format({
+						mode = "symbol", -- show only symbol annotations
+						maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+						-- can also be a function to dynamically calculate max width such as
+						-- maxwidth = function() return math.floor(0.45 * vim.o.columns) end,
+						ellipsis_char = "...", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
+						show_labelDetails = true, -- show labelDetails in menu. Disabled by default
+					}),
+				},
 			})
 
 			vim.api.nvim_set_hl(0, "CmpItemKindCody", { fg = "Red" })
@@ -130,6 +142,7 @@ return {
 	{
 		"mrcjkb/rustaceanvim",
 		version = "^4", -- Recommended
+		enabled = false,
 		lazy = false, -- This plugin is already lazy
 		keys = {
 			{ "<leader>ld", "<cmd>RustLsp renderDiagnostic<cr>", desc = "Render rust diagnostics" },
