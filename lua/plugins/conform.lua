@@ -10,16 +10,27 @@ return {
 		},
 	},
 	opts = {
+		formatters = {
+			-- saltlint = {
+			-- 	command = "salt-lint",
+			-- 	args = { "--nocolor", "--json", "$FILENAME" },
+			-- 	stdin = false,
+			-- 	-- Adds environment args to the yamlfix formatter
+			-- 	-- env = {
+			-- 	-- 	YAMLFIX_SEQUENCE_STYLE = "block_style",
+			-- 	-- },
+			-- },
+		},
 		formatters_by_ft = {
 			lua = { "stylua" },
 			go = { "gofmt" },
 			nix = { "alejandra" },
-			sls = { "saltlint" },
 			yaml = { { "prettierd", "prettier" } },
 			html = { { "prettierd", "prettier" } },
 			javascript = { { "prettierd", "prettier" } },
 			php = { "php_cs_fixer" },
 			rust = { "rustfmt" },
+			md = { "mdformat" },
 		},
 	},
 }
