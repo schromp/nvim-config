@@ -43,6 +43,7 @@ return {
 			lspconfig.emmet_ls.setup({})
 			lspconfig.rust_analyzer.setup({})
 			lspconfig.arduino_language_server.setup({})
+			lspconfig.yamlls.setup({})
 			lspconfig.texlab.setup({
 				build = {
 					args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
