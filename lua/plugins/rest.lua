@@ -1,6 +1,7 @@
 return {
   "rest-nvim/rest.nvim",
   dependencies = { { "nvim-lua/plenary.nvim" } },
+  enabled = false,
   keys = {
     { "<leader>rr", "<Plug>RestNvim", desc = "Run Rest Request" },
     { "<leader>rp", "<Plug>RestNvimPreview", desc = "Run Rest Request" },
