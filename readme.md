@@ -3,3 +3,4 @@
 ## Todo
 
 - Marks
+- Different Status Bar Maybe
