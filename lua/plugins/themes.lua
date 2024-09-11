@@ -144,4 +144,10 @@ return {
 			})
 		end,
 	},
+	{
+		"diegoulloao/neofusion.nvim"
+	},
+	{
+		"Mofiqul/dracula.nvim"
+	}
 }
