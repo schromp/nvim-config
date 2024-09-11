@@ -54,4 +54,4 @@ vim.opt.list = true
 
 vim.opt.termguicolors = true
 
-opt.colorcolumn = "72"
+-- opt.colorcolumn = "72"
