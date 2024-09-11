@@ -37,7 +37,7 @@ return {
 			lspconfig.lua_ls.setup({})
 			lspconfig.pyright.setup({})
 			lspconfig.phpactor.setup({})
-			lspconfig.tsserver.setup({})
+			lspconfig.ts_ls.setup({})
 			lspconfig.cssls.setup({})
 			lspconfig.clangd.setup({})
 			lspconfig.emmet_ls.setup({})
