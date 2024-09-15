@@ -39,9 +39,13 @@ return {
 			lspconfig.phpactor.setup({})
 			lspconfig.tsserver.setup({})
 			lspconfig.cssls.setup({})
-			lspconfig.clangd.setup({})
+			lspconfig.clangd.setup({
+				cmd = {
+					"clangd", "--query-driver=**"
+				}
+			})
 			lspconfig.emmet_ls.setup({})
-			lspconfig.rust_analyzer.setup({})
+			-- lspconfig.rust_analyzer.setup({})
 			lspconfig.arduino_language_server.setup({})
 			lspconfig.yamlls.setup({})
 			lspconfig.texlab.setup({
@@ -143,10 +147,43 @@ return {
 	{
 		"mrcjkb/rustaceanvim",
 		version = "^4", -- Recommended
-		enabled = false,
+		enabled = true,
 		lazy = false, -- This plugin is already lazy
 		keys = {
 			{ "<leader>ld", "<cmd>RustLsp renderDiagnostic<cr>", desc = "Render rust diagnostics" },
 		},
+		config = function()
+			vim.g.rustaceanvim = function()
+				-- Update this path
+				local extension_path = vim.env.HOME .. "/.vscode/extensions/vadimcn.vscode-lldb-1.10.0/"
+				local codelldb_path = extension_path .. "adapter/codelldb"
+				local liblldb_path = extension_path .. "lldb/lib/liblldb"
+				local this_os = vim.uv.os_uname().sysname
+
+				-- The path is different on Windows
+				if this_os:find("Windows") then
+					codelldb_path = extension_path .. "adapter\\codelldb.exe"
+					liblldb_path = extension_path .. "lldb\\bin\\liblldb.dll"
+				else
+					-- The liblldb extension is .so for Linux and .dylib for MacOS
+					liblldb_path = liblldb_path .. (this_os == "Linux" and ".so" or ".dylib")
+				end
+
+				local cfg = require("rustaceanvim.config")
+				return {
+					dap = {
+						adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path),
+					},
+				}
+			end
+		end,
 	},
+	-- {
+	-- 	"folke/neodev.nvim",
+	-- 	config = function()
+	-- 		require("neodev").setup({
+	-- 			library = { plugins = { "nvim-dap-ui" }, types = true },
+	-- 		})
+	-- 	end,
+	-- },
 }
