@@ -31,6 +31,8 @@ return {
 			php = { "php_cs_fixer" },
 			rust = { "rustfmt" },
 			md = { "mdformat" },
+			c = { "clang-format"},
+			cpp = { "clang-format"},
 		},
 	},
 }
