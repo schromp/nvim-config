@@ -1,4 +1,0 @@
-return {
-	"ObserverOfTime/nvimcord",
-	opts = {},
-}
