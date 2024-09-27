@@ -1,7 +1,7 @@
 return {
 	"echasnovski/mini.nvim",
 	version = false,
-  lazy = false,
+	lazy = false,
 	keys = {
 		-- { "<leader>fe", "<cmd>lua  },
 		-- {
@@ -20,7 +20,7 @@ return {
 		-- },
 	},
 	opts = {},
-  lazy = false,
+	lazy = false,
 	config = function(_, opts)
 		-- files
 		-- require("mini.files").setup(opts)
@@ -51,5 +51,12 @@ return {
 		require("mini.surround").setup()
 
 		require("mini.align").setup()
+		-- require("mini.indentscope").setup({
+		-- 	draw = {
+		-- 		delay = 10,
+		-- 		animation = require("mini.indentscope").gen_animation.none(),
+		-- 		symbol = "│",
+		-- 	},
+		-- })
 	end,
 }
