@@ -43,6 +43,7 @@ return {
 			lspconfig.emmet_ls.setup({})
 			lspconfig.rust_analyzer.setup({})
 			lspconfig.arduino_language_server.setup({})
+			lspconfig.bashls.setup({})
 			lspconfig.yamlls.setup({})
 			lspconfig.texlab.setup({
 				build = {
