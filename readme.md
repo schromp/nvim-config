@@ -4,3 +4,4 @@
 
 - Marks
 - Different Status Bar Maybe
+- function context thingy
