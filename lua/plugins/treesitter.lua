@@ -4,7 +4,7 @@ return {
 		enabled = true,
 		build = ":TSUpdate",
 		dependencies = {
-			-- "vmware-archive/salt-vim"
+			-- "vmware-archive/salt-vim",
 			"mrjones2014/nvim-ts-rainbow",
 		},
 		config = function()
@@ -29,6 +29,7 @@ return {
 					"http",
 					"json",
 					"php",
+					"yaml",
 				},
 
 				-- Install parsers synchronously (only applied to `ensure_installed`)

@@ -33,6 +33,7 @@ return {
 			md = { "mdformat" },
 			c = { "clang-format"},
 			cpp = { "clang-format"},
+			tf = {"terraform_fmt"}
 		},
 	},
 }

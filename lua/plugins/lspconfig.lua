@@ -57,6 +57,7 @@ return {
 					onSave = true,
 				},
 			})
+			lspconfig.terraformls.setup{}
 
 			vim.keymap.set("n", "<space>le", vim.diagnostic.open_float)
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
