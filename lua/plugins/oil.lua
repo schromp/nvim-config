@@ -1,8 +1,8 @@
 return {
 	"stevearc/oil.nvim",
-  enabled = false,
+  enabled = true,
 	keys = {
-		{ "<leader>fe", "<CMD>Oil<CR>", desc = "Open Oil" },
+		{ "<leader>fo", "<CMD>Oil<CR>", desc = "Open Oil" },
 	},
 	opts = {},
 	-- Optional dependencies
