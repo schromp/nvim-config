@@ -18,6 +18,7 @@ return {
 		{ "<leader>fu", "<cmd>Telescope grep_string<cr>", desc = "Find Files" },
 		{ "<leader>fk", "<cmd>Telescope command_history<cr>", desc = "Command History" },
 		{ "<leader>fp", "<cmd>Telescope neovim-project discover<cr>", desc = "Project picker" },
+		{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Find buffers" },
 	},
 	config = function()
 		require("telescope").setup({
