@@ -3,12 +3,6 @@ return {
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			{ "folke/neodev.nvim" },
-			{ "hrsh7th/nvim-cmp" }, -- Required
-			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
-			{ "hrsh7th/cmp-path" }, -- Required
-			{ "hrsh7th/cmp-buffer" },
-			{ "L3MON4D3/LuaSnip" },
-			{ "saadparwaiz1/cmp_luasnip" }, -- Required
 			{ "vmware-archive/salt-vim" },
 			{ "onsails/lspkind.nvim" },
 		},
@@ -41,8 +35,9 @@ return {
 			lspconfig.cssls.setup({})
 			lspconfig.clangd.setup({
 				cmd = {
-					"clangd", "--query-driver=**"
-				}
+					"clangd",
+					"--query-driver=**",
+				},
 			})
 			lspconfig.emmet_ls.setup({})
 			-- lspconfig.rust_analyzer.setup({})
@@ -57,6 +52,7 @@ return {
 					onSave = true,
 				},
 			})
+      lspconfig.nushell.setup{}
 
 			vim.keymap.set("n", "<space>le", vim.diagnostic.open_float)
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
@@ -86,52 +82,6 @@ return {
 					vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 				end,
 			})
-
-			local cmp = require("cmp")
-
-			require("luasnip.loaders.from_vscode").lazy_load()
-			local luasnip = require("luasnip")
-			local lspkind = require("lspkind")
-			cmp.setup({
-
-				sources = {
-					{ name = "path" },
-					{ name = "nvim_lsp" },
-					{ name = "nvim_lua" },
-					{ name = "buffer", keyword_length = 3 },
-					{ name = "luasnip", keyword_length = 2 },
-					{ name = "cody" },
-				},
-				mapping = {
-					["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-					["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
-					["<Up>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-					["<Down>"] = cmp.mapping.select_next_item(), -- next suggestion
-					["<CR>"] = cmp.mapping.confirm({ select = false }),
-				},
-				window = {
-					completeopt = "menu,menuone,noinsert",
-					completion = cmp.config.window.bordered(),
-					documentation = cmp.config.window.bordered(),
-				},
-				snippet = {
-					expand = function(args)
-						luasnip.lsp_expand(args.body)
-					end,
-				},
-				formatting = {
-					format = lspkind.cmp_format({
-						mode = "symbol", -- show only symbol annotations
-						maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
-						-- can also be a function to dynamically calculate max width such as
-						-- maxwidth = function() return math.floor(0.45 * vim.o.columns) end,
-						ellipsis_char = "...", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
-						show_labelDetails = true, -- show labelDetails in menu. Disabled by default
-					}),
-				},
-			})
-
-			vim.api.nvim_set_hl(0, "CmpItemKindCody", { fg = "Red" })
 		end,
 	},
 	{
