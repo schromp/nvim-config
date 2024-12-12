@@ -11,6 +11,7 @@ return {
 			{ "saadparwaiz1/cmp_luasnip" }, -- Required
 			{ "vmware-archive/salt-vim" },
 			{ "onsails/lspkind.nvim" },
+			{ "nvim-java/nvim-java" },
 		},
 		config = function()
 			local lspconfig = require("lspconfig")
@@ -57,7 +58,8 @@ return {
 					onSave = true,
 				},
 			})
-			lspconfig.terraformls.setup{}
+			lspconfig.terraformls.setup({})
+			lspconfig.jdtls.setup({})
 
 			vim.keymap.set("n", "<space>le", vim.diagnostic.open_float)
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
