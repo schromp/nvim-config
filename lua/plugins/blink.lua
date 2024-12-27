@@ -37,7 +37,7 @@ return {
     -- completion = { accept = { auto_brackets = { enabled = true } } }
 
     -- experimental signature help support
-    -- signature = { enabled = true }
+    signature = { enabled = true }
   },
   -- allows extending the enabled_providers array elsewhere in your config
   -- without having to redefine it
