@@ -8,8 +8,8 @@ return {
 		-- opts = { style = "moon", transparent = DynConfig.transparent },
 		config = function()
 			require("tokyonight").setup({
-        style = "moon",
-        transparent = DynConfig.transparent,
+				style = "moon",
+				transparent = DynConfig.transparent,
 				on_highlights = function(hl, c)
 					local prompt = "#2d3149"
 					hl.TelescopeNormal = {
@@ -55,7 +55,7 @@ return {
 		end,
 	},
 	{
-		"sainnhe/gruvbox-material",
+		"ellisonleao/gruvbox.nvim",
 	},
 	{
 		"AlexvZyl/nordic.nvim",
@@ -145,9 +145,9 @@ return {
 		end,
 	},
 	{
-		"diegoulloao/neofusion.nvim"
+		"diegoulloao/neofusion.nvim",
 	},
 	{
-		"Mofiqul/dracula.nvim"
-	}
+		"Mofiqul/dracula.nvim",
+	},
 }
