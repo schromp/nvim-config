@@ -24,7 +24,7 @@ opt.smartcase = true
 opt.incsearch = true
 
 --cursor line
-opt.cursorline = true
+opt.cursorline = false
 
 -- termcolors (need to be disabled for themes)
 opt.termguicolors = false
@@ -47,7 +47,7 @@ opt.splitbelow = true
 -- opt.timeoutlen = 300
 
 -- cursor
---opt.guicursor = ""
+-- opt.guicursor = ""
 
 vim.opt.listchars = {eol = '↵', tab = '  '}
 vim.opt.list = true
