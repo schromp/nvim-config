@@ -150,4 +150,7 @@ return {
 	{
 		"Mofiqul/dracula.nvim",
 	},
+  {
+    "thedenisnikulin/vim-cyberpunk"
+  }
 }
