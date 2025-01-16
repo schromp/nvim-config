@@ -1,18 +1,22 @@
 return {
 	"coffebar/neovim-project",
-	enabled = false,
+	enabled = true,
+	keys = {
+		{ "<leader>fp", "<cmd>NeovimProjectDiscover<cr>", desc = "Find projects" },
+		{ "<leader>pt", "<cmd>NeovimProjectLoadRecent<cr>", desc = "Toggle to recent project" },
+	},
 	opts = {
 		projects = { -- define project roots
-			"~/Repos/indi/*",
-			"~/Repos/cruises/*",
-			"~/Repos/non-essential/*",
 			"~/Repos/*",
-			"~/repos/*",
-      "~/.config/nvim",
+			-- "~/repos/*",
+			"~/.config/nvim",
 			"~/repos/bachelorarbeit/*",
 			"~/repos/vaults/*",
 		},
-		last_session_on_startup = true,
+		last_session_on_startup = false,
+		picker = {
+			type = "fzf-lua",
+		},
 	},
 	init = function()
 		-- enable saving the state of plugins in the session
@@ -20,7 +24,8 @@ return {
 	end,
 	dependencies = {
 		{ "nvim-lua/plenary.nvim" },
-		{ "nvim-telescope/telescope.nvim" },
+		-- { "nvim-telescope/telescope.nvim" }, -- Disabled because this config uses fzf-lua for now
+		{ "ibhagwan/fzf-lua" },
 		{ "Shatur/neovim-session-manager" },
 	},
 	lazy = false,
