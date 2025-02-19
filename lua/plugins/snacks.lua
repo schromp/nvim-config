@@ -3,13 +3,13 @@ return {
 	priority = 1000,
 	lazy = false,
 	opts = {
-    explorer = {
-      enabled = true,
-      replace_netrw = true
-    },
-    picker = {
-      enabled = true,
-    },
+		explorer = {
+			enabled = true,
+			replace_netrw = true,
+		},
+		picker = {
+			enabled = true,
+		},
 		bigfile = { enabled = true },
 		notifier = { enabled = true },
 		quickfile = { enabled = true },
@@ -130,57 +130,65 @@ return {
 			function()
 				Snacks.dashboard()
 			end,
-      desc = "Open the dashboard"
+			desc = "Open the dashboard",
 		},
 		{
 			"<leader>fe",
 			function()
 				Snacks.explorer()
 			end,
-      desc = "Open the explorer"
+			desc = "Open the explorer",
 		},
 		{
 			"<leader>ff",
 			function()
 				Snacks.picker("files")
 			end,
-      desc = "Find files"
+			desc = "Find files",
 		},
 		{
 			"<leader>fb",
 			function()
 				Snacks.picker("buffers")
 			end,
-      desc = "Find buffers"
+			desc = "Find buffers",
 		},
 		{
 			"<leader>fd",
 			function()
 				Snacks.picker("diagnostics")
 			end,
-      desc = "Find diagnostics"
+			desc = "Find diagnostics",
 		},
 		{
 			"<leader>fs",
 			function()
+				Snacks.picker.grep({
+					dirs = { vim.api.nvim_buf_get_name(0) },
+				})
+			end,
+			desc = "Grep in current buffer",
+		},
+		{
+			"<leader>fa",
+			function()
 				Snacks.picker("grep")
 			end,
-      desc = "Grep in project"
+			desc = "Grep in project",
 		},
 		{
 			"<leader>fu",
 			function()
 				Snacks.picker("grep_word")
 			end,
-      desc = "Grep word under cursor"
+			desc = "Grep word under cursor",
 		},
 		{
 			"<leader>fc",
 			function()
 				Snacks.picker("colorschemes")
 			end,
-      desc = "Find colorschemes"
+			desc = "Find colorschemes",
 		},
-
 	},
 }
