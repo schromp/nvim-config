@@ -1,6 +1,7 @@
 return {
 	"ibhagwan/fzf-lua",
 	-- optional for icon support
+  enabled = false,
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	keys = {
 		{
@@ -10,13 +11,13 @@ return {
 			end,
 			desc = "Resume last query",
 		},
-		{
-			"<leader>ff",
-			function()
-				require("fzf-lua").files()
-			end,
-			desc = "Find Files",
-		},
+		-- {
+		-- 	"<leader>ff",
+		-- 	function()
+		-- 		require("fzf-lua").files()
+		-- 	end,
+		-- 	desc = "Find Files",
+		-- },
 		{
 			"<leader>fa",
 			function()
