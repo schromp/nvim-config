@@ -56,6 +56,9 @@ return {
 	},
 	{
 		"ellisonleao/gruvbox.nvim",
+		config = function()
+			vim.opt.background = "light"
+		end,
 	},
 	{
 		"AlexvZyl/nordic.nvim",
@@ -139,7 +142,7 @@ return {
 				transparent = false,
 				italic_comments = true,
 				hide_fillchars = true,
-				borderless_telescope = true,
+				borderless_pickers = true,
 				terminal_colors = true,
 			})
 		end,
@@ -150,7 +153,7 @@ return {
 	{
 		"Mofiqul/dracula.nvim",
 	},
-  {
-    "thedenisnikulin/vim-cyberpunk"
-  }
+	{
+		"thedenisnikulin/vim-cyberpunk",
+	},
 }
