@@ -38,3 +38,5 @@ k.set("n", "<leader>ll", ":Lazy<CR>")
 -- k.set("n", "<leader>e", ":Explore<CR>")
 
 k.set("t", "<C-ESC>", "<C-\\><C-n><C-w>h", { silent = true })
+
+k.set("n", "<leader>t", ":tabnew<CR>", { desc = "Open new tab" })
