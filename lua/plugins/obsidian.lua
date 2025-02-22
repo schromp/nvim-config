@@ -21,14 +21,14 @@ return {
 	},
 	opts = {
 		workspaces = {
-			-- {
-			-- 	name = "personal",
-			-- 	path = "~/repos/vaults/obsidian-lk",
-			-- },
 			{
-				name = "indi-admin-documentation",
-				path = "~/Repos/indi-admin-documentation",
+				name = "personal",
+				path = "~/repos/vaults/obsidian-lk",
 			},
+			-- {
+			-- 	name = "indi-admin-documentation",
+			-- 	path = "~/Repos/indi-admin-documentation",
+			-- },
 		},
 
 		completion = {
