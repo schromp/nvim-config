@@ -29,6 +29,10 @@ return {
 			-- 	name = "indi-admin-documentation",
 			-- 	path = "~/Repos/indi-admin-documentation",
 			-- },
+			{
+				name = "notes",
+				path = "~/Repos/notes",
+			},
 		},
 
 		completion = {

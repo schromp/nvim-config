@@ -29,14 +29,18 @@ return {
 		-- elsewhere in your config, without redefining it, via `opts_extend`
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
+			-- completion = {
+			--   enabled_providers = { 'lsp', 'path', 'snippets', 'buffer' },
+			-- },
 		},
 
 		-- experimental auto-brackets support
 		-- completion = { accept = { auto_brackets = { enabled = true } } }
 
 		-- experimental signature help support
-		signature = { enabled = true }
+		signature = { enabled = true },
 	},
-
+	-- allows extending the enabled_providers array elsewhere in your config
+	-- without having to redefine it
 	opts_extend = { "sources.completion.enabled_providers" },
 }
