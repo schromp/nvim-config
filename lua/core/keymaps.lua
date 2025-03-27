@@ -32,11 +32,12 @@ k.set("n", "<C-down>", ":resize -5<cr>")
 k.set("n", "L", ":tabn<CR>")
 k.set("n", "H", ":tabp<CR>")
 
-k.set("n", "<leader>h", ":nohlsearch<CR>")
+k.set("n", "<leader>h", ":nohlsearch<CR>", {desc = "Clear search highlight"})
 
-k.set("n", "<leader>ll", ":Lazy<CR>")
+k.set("n", "<leader>ll", ":Lazy<CR>", {desc = "Open Lazy UI"})
 -- k.set("n", "<leader>e", ":Explore<CR>")
 
-k.set("t", "<C-ESC>", "<C-\\><C-n><C-w>h", { silent = true })
+k.set("t", "<C-ESC>", "<C-\\><C-n><C-w>h", { silent = true, desc = "Escape Terminal" })
 
 k.set("n", "<leader>t", ":tabnew<CR>", { desc = "Open new tab" })
+k.set("n", "<leader>bac", ":%bd|e#<CR>", {desc = "Close all buffers except the one currently focused"})
