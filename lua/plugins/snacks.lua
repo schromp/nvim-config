@@ -4,11 +4,11 @@ return {
 	lazy = false,
 	opts = {
 		explorer = {
-			enabled = true,
+			enabled = false,
 			replace_netrw = true,
 		},
 		picker = {
-			enabled = true,
+			enabled = false,
 		},
 		bigfile = { enabled = true },
 		notifier = { enabled = true },
@@ -132,63 +132,63 @@ return {
 			end,
 			desc = "Open the dashboard",
 		},
-		{
-			"<leader>fe",
-			function()
-				Snacks.explorer()
-			end,
-			desc = "Open the explorer",
-		},
-		{
-			"<leader>ff",
-			function()
-				Snacks.picker("files")
-			end,
-			desc = "Find files",
-		},
-		{
-			"<leader>fb",
-			function()
-				Snacks.picker("buffers")
-			end,
-			desc = "Find buffers",
-		},
-		{
-			"<leader>fd",
-			function()
-				Snacks.picker("diagnostics")
-			end,
-			desc = "Find diagnostics",
-		},
-		{
-			"<leader>fs",
-			function()
-				Snacks.picker.grep({
-					dirs = { vim.api.nvim_buf_get_name(0) },
-				})
-			end,
-			desc = "Grep in current buffer",
-		},
-		{
-			"<leader>fa",
-			function()
-				Snacks.picker("grep")
-			end,
-			desc = "Grep in project",
-		},
-		{
-			"<leader>fu",
-			function()
-				Snacks.picker("grep_word")
-			end,
-			desc = "Grep word under cursor",
-		},
-		{
-			"<leader>fc",
-			function()
-				Snacks.picker("colorschemes")
-			end,
-			desc = "Find colorschemes",
-		},
+		-- {
+		-- 	"<leader>fe",
+		-- 	function()
+		-- 		Snacks.explorer()
+		-- 	end,
+		-- 	desc = "Open the explorer",
+		-- },
+		-- {
+		-- 	"<leader>ff",
+		-- 	function()
+		-- 		Snacks.picker("files")
+		-- 	end,
+		-- 	desc = "Find files",
+		-- },
+		-- {
+		-- 	"<leader>fb",
+		-- 	function()
+		-- 		Snacks.picker("buffers")
+		-- 	end,
+		-- 	desc = "Find buffers",
+		-- },
+		-- {
+		-- 	"<leader>fd",
+		-- 	function()
+		-- 		Snacks.picker("diagnostics")
+		-- 	end,
+		-- 	desc = "Find diagnostics",
+		-- },
+		-- {
+		-- 	"<leader>fs",
+		-- 	function()
+		-- 		Snacks.picker.grep({
+		-- 			dirs = { vim.api.nvim_buf_get_name(0) },
+		-- 		})
+		-- 	end,
+		-- 	desc = "Grep in current buffer",
+		-- },
+		-- {
+		-- 	"<leader>fa",
+		-- 	function()
+		-- 		Snacks.picker("grep")
+		-- 	end,
+		-- 	desc = "Grep in project",
+		-- },
+		-- {
+		-- 	"<leader>fu",
+		-- 	function()
+		-- 		Snacks.picker("grep_word")
+		-- 	end,
+		-- 	desc = "Grep word under cursor",
+		-- },
+		-- {
+		-- 	"<leader>fc",
+		-- 	function()
+		-- 		Snacks.picker("colorschemes")
+		-- 	end,
+		-- 	desc = "Find colorschemes",
+		-- },
 	},
 }
