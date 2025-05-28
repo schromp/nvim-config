@@ -31,9 +31,9 @@ return {
 			php = { "php_cs_fixer" },
 			rust = { "rustfmt" },
 			md = { "mdformat" },
-			c = { "clang-format"},
-			cpp = { "clang-format"},
-			tf = {"terraform_fmt"}
+			c = { "clang-format" },
+			cpp = { "clang-format" },
+			tf = { "terraform_fmt" },
 		},
 	},
 }
