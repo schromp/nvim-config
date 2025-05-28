@@ -5,6 +5,13 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	keys = {
 		{
+			"<leader>fl",
+			function()
+				require("fzf-lua").builtin()
+			end,
+			desc = "Select find builtins",
+		},
+		{
 			"<leader>fr",
 			function()
 				require("fzf-lua").resume()
@@ -21,7 +28,7 @@ return {
 		{
 			"<leader>fa",
 			function()
-				require("fzf-lua").grep()
+				require("fzf-lua").live_grep()
 			end,
 			desc = "Grep all files",
 		},
