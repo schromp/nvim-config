@@ -37,6 +37,21 @@ return {
 		-- experimental auto-brackets support
 		-- completion = { accept = { auto_brackets = { enabled = true } } }
 
+		completion = {
+			documentation = { auto_show = true, auto_show_delay_ms = 500 },
+			ghost_text = { enabled = true },
+			accept = {
+				auto_brackets = {
+					enabled = true,
+					default_brackets = { "(", ")" },
+					kind_resolution = {
+						enabled = true,
+						blocked_filetypes = { "typescriptreact", "javascriptreact", "vue" },
+					},
+				},
+			},
+		},
+
 		-- experimental signature help support
 		signature = { enabled = true },
 	},
