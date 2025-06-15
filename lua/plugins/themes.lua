@@ -57,7 +57,7 @@ return {
 	{
 		"ellisonleao/gruvbox.nvim",
 		config = function()
-			vim.opt.background = "light"
+			-- vim.opt.background = "light"
 		end,
 	},
 	{
@@ -155,5 +155,16 @@ return {
 	},
 	{
 		"thedenisnikulin/vim-cyberpunk",
+	},
+	{
+		"neanias/everforest-nvim",
+		config = function()
+			require("everforest").setup({
+				transparent_background_level = 1,
+			})
+		end,
+	},
+	{
+		"darkvoid-theme/darkvoid.nvim",
 	},
 }
