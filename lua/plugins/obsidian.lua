@@ -21,18 +21,18 @@ return {
 	},
 	opts = {
 		workspaces = {
+			{
+				name = "personal",
+				path = "~/repos/vaults/obsidian-lk",
+			},
 			-- {
-			-- 	name = "personal",
-			-- 	path = "~/repos/vaults/obsidian-lk",
+			-- 	name = "indi-admin-documentation",
+			-- 	path = "~/Repos/indi-admin-documentation",
 			-- },
-			{
-				name = "indi-admin-documentation",
-				path = "~/Repos/indi-admin-documentation",
-			},
-			{
-				name = "notes",
-				path = "~/Repos/notes",
-			},
+			-- {
+			-- 	name = "notes",
+			-- 	path = "~/Repos/notes",
+			-- },
 		},
 
 		completion = {
