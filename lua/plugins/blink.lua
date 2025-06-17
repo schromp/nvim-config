@@ -28,15 +28,22 @@ return {
 		-- default list of enabled providers defined so that you can extend it
 		-- elsewhere in your config, without redefining it, via `opts_extend`
 		sources = {
+<<<<<<< HEAD
 			default = { "lsp", "path", "snippets", "buffer" },
 			-- completion = {
 			--   enabled_providers = { 'lsp', 'path', 'snippets', 'buffer' },
 			-- },
+=======
+			completion = {
+				enabled_providers = { "lsp", "path", "snippets" },
+			},
+>>>>>>> 092ad5101aee95310aff90a4416af05d683883bf
 		},
 
 		-- experimental auto-brackets support
 		-- completion = { accept = { auto_brackets = { enabled = true } } }
 
+<<<<<<< HEAD
 		completion = {
 			documentation = { auto_show = true, auto_show_delay_ms = 500 },
 			ghost_text = { enabled = true },
@@ -52,6 +59,8 @@ return {
 			},
 		},
 
+=======
+>>>>>>> 092ad5101aee95310aff90a4416af05d683883bf
 		-- experimental signature help support
 		signature = { enabled = true },
 	},

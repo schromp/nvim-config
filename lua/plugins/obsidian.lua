@@ -29,10 +29,17 @@ return {
 			-- 	name = "indi-admin-documentation",
 			-- 	path = "~/Repos/indi-admin-documentation",
 			-- },
+<<<<<<< HEAD
 			{
 				name = "notes",
 				path = "~/Repos/notes",
 			},
+=======
+			-- {
+			-- 	name = "notes",
+			-- 	path = "~/Repos/notes",
+			-- },
+>>>>>>> 092ad5101aee95310aff90a4416af05d683883bf
 		},
 
 		completion = {

@@ -56,9 +56,15 @@ return {
 	},
 	{
 		"ellisonleao/gruvbox.nvim",
+<<<<<<< HEAD
 		config = function()
 			-- vim.opt.background = "light"
 		end,
+=======
+    config = function()
+      -- vim.opt.background = "light"
+    end
+>>>>>>> 092ad5101aee95310aff90a4416af05d683883bf
 	},
 	{
 		"AlexvZyl/nordic.nvim",
