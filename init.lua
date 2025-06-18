@@ -16,6 +16,7 @@ JsonVariables = require "lib.dynconfig"
 require "core.options"
 require "core.keymaps"
 require "core.neovide"
+require "core.lsp"
 
 
 require("lazy").setup("plugins")

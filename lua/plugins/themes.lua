@@ -56,9 +56,9 @@ return {
 	},
 	{
 		"ellisonleao/gruvbox.nvim",
-		config = function()
-			-- vim.opt.background = "light"
-		end,
+    config = function()
+      -- vim.opt.background = "light"
+    end
 	},
 	{
 		"AlexvZyl/nordic.nvim",

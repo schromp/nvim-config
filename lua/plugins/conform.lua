@@ -20,6 +20,9 @@ return {
 			-- 	-- 	YAMLFIX_SEQUENCE_STYLE = "block_style",
 			-- 	-- },
 			-- },
+      qmlformat = {
+        command = "qmlformat"
+      }
 		},
 		formatters_by_ft = {
 			lua = { "stylua" },
@@ -30,10 +33,11 @@ return {
 			javascript = { { "prettierd", "prettier" } },
 			php = { "php_cs_fixer" },
 			rust = { "rustfmt" },
-			md = { "mdformat" },
-			c = { "clang-format"},
-			cpp = { "clang-format"},
-			tf = {"terraform_fmt"}
+      md = { "mdformat" },
+      c = { "clang-format" },
+      cpp = { "clang-format" },
+      tf = { "terraform_fmt" },
+      qml = { "qmlformat" },
 		},
 	},
 }

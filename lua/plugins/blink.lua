@@ -28,14 +28,26 @@ return {
 		-- default list of enabled providers defined so that you can extend it
 		-- elsewhere in your config, without redefining it, via `opts_extend`
 		sources = {
-			default = { "lsp", "path", "snippets", "buffer" },
-			-- completion = {
-			--   enabled_providers = { 'lsp', 'path', 'snippets', 'buffer' },
-			-- },
+			default = { "lsp", "path", "snippets" },
 		},
 
 		-- experimental auto-brackets support
 		-- completion = { accept = { auto_brackets = { enabled = true } } }
+
+		completion = {
+			documentation = { auto_show = true, auto_show_delay_ms = 500 },
+			ghost_text = { enabled = false },
+			accept = {
+				auto_brackets = {
+					enabled = true,
+					default_brackets = { "(", ")" },
+					kind_resolution = {
+						enabled = true,
+						blocked_filetypes = { "typescriptreact", "javascriptreact", "vue" },
+					},
+				},
+			},
+		},
 
 		-- experimental signature help support
 		signature = { enabled = true },
