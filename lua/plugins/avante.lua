@@ -3,6 +3,7 @@ return {
 		"yetone/avante.nvim",
 		event = "VeryLazy",
 		version = false, -- Never set this value to "*"! Never!
+    enabled = false,
 		opts = {
 			-- add any opts here
 			-- for example
@@ -85,6 +86,7 @@ return {
 	},
 	{
 		"ravitemer/mcphub.nvim",
+    enabled = false,
 		dependencies = {
 			"nvim-lua/plenary.nvim", -- Required for Job and HTTP requests
 		},
