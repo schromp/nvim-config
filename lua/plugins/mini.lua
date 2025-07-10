@@ -4,6 +4,7 @@ return {
 	lazy = false,
 	opts = {},
 	config = function(_, opts)
+    -- INFO: mini.diff is enabled in code-companion.nvim
 		require("mini.pairs").setup()
 		require("mini.surround").setup({
 			mappings = {

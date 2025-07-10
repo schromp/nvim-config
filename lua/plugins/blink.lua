@@ -29,6 +29,9 @@ return {
 		-- elsewhere in your config, without redefining it, via `opts_extend`
 		sources = {
 			default = { "lsp", "path", "snippets" },
+			per_filetype = {
+				codecompanion = { "codecompanion" },
+			},
 		},
 
 		-- experimental auto-brackets support
