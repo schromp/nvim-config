@@ -22,12 +22,5 @@ return {
 			end,
 			desc = "Notification History",
 		},
-		{
-			"<leader>pc",
-			function()
-				Snacks.dashboard()
-			end,
-			desc = "Open the dashboard",
-		},
 	},
 }
