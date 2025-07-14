@@ -17,15 +17,6 @@ return {
 		strategies = {
 			chat = {
 				adapter = "copilot",
-				adapters = {
-					anthropic = function()
-						return require("codecompanion.adapters").extend("copilot", {
-							env = {
-								api_key = "",
-							},
-						})
-					end,
-				},
 			},
 		},
 		extensions = {
