@@ -1,6 +1,6 @@
 return {
 	dir = "~/.config/nvim/lua/salt-nacl",
-  enabled = false,
+  enabled = true,
   lazy = true,
 	keys = {
 		{ "<leader>sd", mode = "v", function() require("salt-nacl").decrypt() end, desc = "Decrypt visual selection" },

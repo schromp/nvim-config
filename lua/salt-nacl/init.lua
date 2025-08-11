@@ -25,7 +25,7 @@ function M.decrypt()
 	print(input_data, start_pos, end_pos)
 
 	vim.system(
-		{ "python3", "/Users/lennart.koziollek/Repos/salt_config_indi/nacl_dec.py" },
+		{ "python3", "/Users/lennart.koziollek/Repos/indi-salt-config/nacl_dec.py" },
 		{ stdin = input_data },
 		function(obj)
 			if obj.code == 0 then
@@ -43,7 +43,7 @@ function M.encrypt()
 	local input_data, start_pos, end_pos = get_visual_selection()
 
 	vim.system(
-		{ "python3", "/Users/lennart.koziollek/Repos/salt_config_indi/nacl_enc.py" },
+		{ "python3", "/Users/lennart.koziollek/Repos/indi-salt-config/nacl_enc.py" },
 		{ stdin = input_data },
 		function(obj)
 			if obj.code == 0 then
