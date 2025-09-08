@@ -1,6 +1,6 @@
 return {
 	"mikavilpas/yazi.nvim",
-  enabled = true,
+  enabled = false,
 	keys = {
 		{
 			"<leader>fe",
