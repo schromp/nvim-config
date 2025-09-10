@@ -3,9 +3,10 @@ vim.lsp.enable({
 	"nixd",
 	"lua_ls",
 	"phpactor",
-  "terraformls",
-  "qmlls",
-  "salt_ls"
+	"terraformls",
+	"qmlls",
+	"salt_ls",
+	"clangd",
 })
 
 vim.diagnostic.config({
