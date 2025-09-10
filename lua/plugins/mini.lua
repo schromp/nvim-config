@@ -14,7 +14,7 @@ return {
 	},
 	config = function(_, opts)
 		-- INFO: mini.diff is enabled in code-companion.nvim
-		require("mini.pairs").setup()
+		-- require("mini.pairs").setup()
 		require("mini.surround").setup({
 			mappings = {
 				add = "gsa", -- Add surrounding in Normal and Visual modes

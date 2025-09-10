@@ -1,7 +1,7 @@
 return {
 	"ibhagwan/fzf-lua",
 	-- optional for icon support
-  enabled = true,
+	enabled = true,
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	keys = {
 		{
@@ -52,6 +52,28 @@ return {
 				require("fzf-lua").buffers()
 			end,
 			desc = "Find buffers",
+		},
+		{
+			"<leader>fp",
+			function()
+				-- require("fzf-lua").files({
+				-- 	cwd = "~/repos",
+				-- 	actions = {
+				-- 		["default"] = function(selected)
+				-- 			local filepath = selected[1]
+				-- 			local dir = vim.fn.fnamemodify(filepath, ":p:h")
+				-- 			vim.api.nvim_set_current_dir(dir)
+				-- 		end,
+				-- 	},
+				-- })
+				require("fzf-lua").fzf_exec("ls ~/repos", {
+					actions = {
+						["default"] = function(selected, _opts)
+							vim.api.nvim_set_current_dir("~/repos/" .. selected[1])
+						end,
+					},
+				})
+			end,
 		},
 	},
 	config = function()
