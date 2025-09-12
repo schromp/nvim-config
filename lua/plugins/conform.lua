@@ -27,7 +27,7 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			go = { "gofmt" },
-			nix = { "alejandra" },
+			nix = { "nixfmt" },
 			yaml = { { "prettierd", "prettier" } },
 			html = { { "prettierd", "prettier" } },
 			javascript = { { "prettierd", "prettier" } },
