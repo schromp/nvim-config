@@ -10,6 +10,7 @@ return {
 		lazy = false, -- neo-tree will lazily load itself
     keys = {
       { "<leader>fe", "<cmd>Neotree toggle<cr>", desc = "Toggle File Explorer" },
+      { "<leader>fc", "<cmd>Neotree reveal_file=%<cr>", desc = "Reveal current file in File Explorer" },
     }
 	},
 }
