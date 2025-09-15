@@ -19,6 +19,13 @@ return {
 				adapter = "copilot",
 			},
 		},
+    display = {
+      chat = {
+        window = {
+          layout = "floating"
+        },
+      },
+    },
 		extensions = {
 			mcphub = {
 				callback = "mcphub.extensions.codecompanion",
