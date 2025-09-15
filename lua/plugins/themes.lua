@@ -111,4 +111,13 @@ return {
 	{
 		"darkvoid-theme/darkvoid.nvim",
 	},
+	{
+		"shaunsingh/nord.nvim",
+	},
+	{
+		"sainnhe/sonokai",
+	},
+	{
+		"nyoom-engineering/oxocarbon.nvim",
+	},
 }
