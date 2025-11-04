@@ -84,6 +84,9 @@ return {
 					["ctrl-q"] = "select-all+accept",
 				},
 			},
+			files = {
+				fd_opts = [[--color=never --hidden --type f --type l --exclude .git --exclude .jj --no-require-git ]],
+			},
 		})
 	end,
 }

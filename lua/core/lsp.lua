@@ -7,6 +7,7 @@ vim.lsp.enable({
 	"qmlls",
 	"salt_ls",
 	"clangd",
+  "ts_ls"
 })
 
 vim.diagnostic.config({
