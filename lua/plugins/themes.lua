@@ -5,11 +5,9 @@ return {
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
-		-- opts = { style = "moon", transparent = DynConfig.transparent },
 		config = function()
 			require("tokyonight").setup({
 				style = "moon",
-				transparent = DynConfig.transparent,
 			})
 		end,
 	},
@@ -20,7 +18,6 @@ return {
 		config = function()
 			require("catppuccin").setup({
 				flavour = "macchiato",
-				transparent_background = DynConfig.transparent, -- disables setting the background color.
 			})
 		end,
 	},
@@ -37,18 +34,11 @@ return {
 		"rose-pine/neovim",
 		name = "rose-pine",
 		config = function()
-			local rpVariant
-			if DynConfig.theme == "rose-pine-dawn" then
-				rpVariant = "dawn"
-			elseif DynConfig.theme == "rose-pine-moon" then
-				rpVariant = "night"
-			elseif DynConfig.theme == "rose-pine-main" then
-				rpVariant = "moon"
-			else
-				rpVariant = "auto"
-			end
 			require("rose-pine").setup({
-				variant = rpVariant,
+        variant = "auto",
+				styles = {
+					transparency = true,
+				},
 			})
 		end,
 	},
