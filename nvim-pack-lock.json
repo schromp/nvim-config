@@ -1,0 +1,20 @@
+{
+  "plugins": {
+    "blink.cmp": {
+      "rev": "57d900e6982f63c7cde689aa06d8af76c8da083e",
+      "src": "https://github.com/Saghen/blink.cmp"
+    },
+    "mini.completion": {
+      "rev": "7c5edfc0e479dd4edd898cc9ddd1920d8c1ce420",
+      "src": "https://github.com/nvim-mini/mini.completion"
+    },
+    "mini.pick": {
+      "rev": "b4351399db5043a781a32699a1bde60b747f711f",
+      "src": "https://github.com/nvim-mini/mini.pick"
+    },
+    "neovim": {
+      "rev": "cf2a288696b03d0934da713d66c6d71557b5c997",
+      "src": "https://github.com/rose-pine/neovim"
+    }
+  }
+}
