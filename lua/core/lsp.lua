@@ -7,7 +7,8 @@ vim.lsp.enable({
 	"qmlls",
 	"salt_ls",
 	"clangd",
-  "ts_ls"
+  "ts_ls",
+  "rust_analyzer",
 })
 
 vim.diagnostic.config({

@@ -16,9 +16,26 @@
       "rev": "b4351399db5043a781a32699a1bde60b747f711f",
       "src": "https://github.com/nvim-mini/mini.pick"
     },
+    "monochrome.nvim": {
+      "rev": "2de78d9688ea4a177bcd9be554ab9192337d35ff",
+      "src": "https://github.com/kdheepak/monochrome.nvim"
+    },
     "neovim": {
       "rev": "cf2a288696b03d0934da713d66c6d71557b5c997",
       "src": "https://github.com/rose-pine/neovim"
+    },
+    "nvim-dev-container": {
+      "rev": "59d85de531912c3def3061ae1d84c769e09a5653",
+      "src": "https://codeberg.org/esensar/nvim-dev-container"
+    },
+    "nvim-treesitter": {
+      "rev": "d3218d988f72ed34414959c9ccd802d393432d6e",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
+      "version": "'v0.10.0'"
+    },
+    "vim-moonfly-colors": {
+      "rev": "5b322b91fe0792d48ef7156af38739ae42fda7d1",
+      "src": "https://github.com/bluz71/vim-moonfly-colors"
     }
   }
 }
