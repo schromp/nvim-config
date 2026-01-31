@@ -9,6 +9,7 @@ vim.lsp.enable({
 	"clangd",
   "ts_ls",
   "rust_analyzer",
+  "copilot",
 })
 
 vim.diagnostic.config({

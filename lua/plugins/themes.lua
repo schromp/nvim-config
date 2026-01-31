@@ -4,4 +4,4 @@ vim.pack.add({
   "https://github.com/kdheepak/monochrome.nvim"
 })
 
-vim.cmd("colorscheme monochrome")
+vim.cmd("colorscheme rose-pine")
