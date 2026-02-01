@@ -9,6 +9,8 @@ vim.lsp.enable({
 	"clangd",
   "ts_ls",
   "rust_analyzer",
+  "jdtls",
+  "copilot",
 })
 
 vim.diagnostic.config({
@@ -44,3 +46,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end, { desc = "Toggle diagnostic virtual_lines" })
 	end,
 })
+
+vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
