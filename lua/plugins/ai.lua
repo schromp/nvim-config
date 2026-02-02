@@ -2,22 +2,19 @@ vim.pack.add({"https://github.com/zbirenbaum/copilot.lua"})
 
 require("copilot").setup({
   suggestion = {
-    enabled = true,
     auto_trigger = true,
-    hide_during_completion = false,
-    debounce = 15,
-    trigger_on_accept = true,
     keymap = {
-      accept = "<C-l>",
-      accept_word = false,
-      accept_line = false,
+      -- accept_word = "<M-l>",
+      -- accept_line = "<M-S-l>",
       next = "<M-]>",
       prev = "<M-[>",
       dismiss = "<C-]>",
-      toggle_auto_trigger = false,
     },
   },
 })
+
+-- Idk the in plugin mapping doesnt work so we do it here
+vim.keymap.set("i", "<C-l>", function () require("copilot.suggestion").accept() end, { desc = "Toggle Sidekick CLI" })
 
 vim.pack.add({"https://github.com/folke/sidekick.nvim"})
 
