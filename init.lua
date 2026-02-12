@@ -3,6 +3,7 @@ require("core.keymaps")
 require("core.neovide")
 require("core.lsp")
 
+require("plugins.util")
 require("plugins.themes")
 require("plugins.blink")
 require("plugins.ai")
