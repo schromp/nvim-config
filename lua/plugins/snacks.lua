@@ -12,6 +12,8 @@ require("snacks").setup({
     },
     sources = {
       explorer = {
+        hidden = "true",
+        ignored = "true"
         -- your explorer picker configuration comes here
         -- or leave it empty to use the default settings
       }

@@ -2,6 +2,7 @@ vim.pack.add({"https://github.com/saghen/blink.cmp"})
 
 require("blink.cmp").setup({
   fuzzy = { implementation = "lua" },
+  completion = { documentation = { auto_show = true } },
   sources = {
     per_filetype = {
       codecompanion = { "codecompanion" },
