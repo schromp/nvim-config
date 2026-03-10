@@ -8,6 +8,10 @@
       "rev": "61f56e863642d7c5c5b50c2a4b2ff9803ee0320d",
       "src": "https://github.com/olimorris/codecompanion.nvim"
     },
+    "conform.nvim": {
+      "rev": "40dcec5555f960b0a04340d76eabdf4efe78599d",
+      "src": "https://github.com/stevearc/conform.nvim"
+    },
     "copilot.lua": {
       "rev": "9b8d77c6c847c83c784c05f5f86b4821ed90d3a1",
       "src": "https://github.com/zbirenbaum/copilot.lua"
