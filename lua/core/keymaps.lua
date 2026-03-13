@@ -39,5 +39,6 @@ k.set("n", "<leader>ll", ":Lazy<CR>", {desc = "Open Lazy UI"})
 
 k.set("t", "<C-ESC>", "<C-\\><C-n><C-w>h", { silent = true, desc = "Escape Terminal" })
 
-k.set("n", "<leader>t", ":tabnew<CR>", { desc = "Open new tab" })
+k.set("n", "<leader>tn", ":tabnew<CR>", { desc = "Open new tab" })
+k.set("n", "<leader>tq", ":tabclose<CR>", { desc = "Close current buffer" })
 -- k.set("n", "<leader>bac", ":%bd|e#<CR>", {desc = "Close all buffers except the one currently focused"})

@@ -5,7 +5,7 @@ opt = vim.opt
 vim.cmd("set nofixendofline")
 
 -- line numbers
-opt.relativenumber = true
+opt.relativenumber = false
 opt.number = true --shows line number of current line
 
 -- tabs

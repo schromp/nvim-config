@@ -16,6 +16,10 @@
       "rev": "9b8d77c6c847c83c784c05f5f86b4821ed90d3a1",
       "src": "https://github.com/zbirenbaum/copilot.lua"
     },
+    "diffview.nvim": {
+      "rev": "4516612fe98ff56ae0415a259ff6361a89419b0a",
+      "src": "https://github.com/sindrets/diffview.nvim"
+    },
     "everforest": {
       "rev": "b10ed9a8b37d6b7448908be98ff8f58f550adc48",
       "src": "https://github.com/sainnhe/everforest"
@@ -51,6 +55,10 @@
     "neovim": {
       "rev": "cf2a288696b03d0934da713d66c6d71557b5c997",
       "src": "https://github.com/rose-pine/neovim"
+    },
+    "nvim": {
+      "rev": "2fc720c68bf9950fc15bafb47b8a56f8bb1be315",
+      "src": "https://github.com/catppuccin/nvim"
     },
     "nvim-dev-container": {
       "rev": "59d85de531912c3def3061ae1d84c769e09a5653",
