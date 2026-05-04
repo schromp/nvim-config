@@ -11,6 +11,7 @@ vim.lsp.enable({
   "rust_analyzer",
   "jdtls",
   "copilot",
+  "tinymist",
 })
 
 vim.diagnostic.config({
