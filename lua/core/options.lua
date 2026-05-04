@@ -54,5 +54,6 @@ opt.splitbelow = true
 
 vim.opt.termguicolors = true
 vim.go.tabclose = "left"
+vim.opt.exrc = true
 
 -- opt.colorcolumn = "72"
