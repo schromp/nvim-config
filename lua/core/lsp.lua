@@ -12,6 +12,7 @@ vim.lsp.enable({
   "jdtls",
   "copilot",
   "tinymist",
+  "nushell",
 })
 
 vim.diagnostic.config({
