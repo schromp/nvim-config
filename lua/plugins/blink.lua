@@ -2,7 +2,17 @@ vim.pack.add({ "https://github.com/saghen/blink.lib", "https://github.com/saghen
 
 require("blink.cmp").setup({
 	fuzzy = { implementation = "lua" },
-	completion = { documentation = { auto_show = true } },
+	completion = {
+		documentation = { auto_show = true },
+		menu = {
+			draw = {
+				columns = {
+					{ "label", "label_description", gap = 1 },
+					{ "kind_icon", "kind" },
+				},
+			},
+		},
+	},
 	sources = {
 		per_filetype = {
 			codecompanion = { "codecompanion" },
