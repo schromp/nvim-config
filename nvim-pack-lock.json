@@ -20,6 +20,10 @@
       "rev": "adff470bca742b7658228ed144589250ecb3dc0a",
       "src": "https://github.com/zbirenbaum/copilot.lua"
     },
+    "cyberdream.nvim": {
+      "rev": "4fbdeb7376faed87ead7c7c805c02092ca7bac01",
+      "src": "https://github.com/scottmckendry/cyberdream.nvim"
+    },
     "diffview.nvim": {
       "rev": "4516612fe98ff56ae0415a259ff6361a89419b0a",
       "src": "https://github.com/sindrets/diffview.nvim"
