@@ -88,6 +88,10 @@
       "rev": "87ea57f420b3460d0c45e239057ffc38fa32f886",
       "src": "https://codeberg.org/esensar/nvim-dev-container"
     },
+    "nvim-spectre": {
+      "rev": "72f56f7585903cd7bf92c665351aa585e150af0f",
+      "src": "https://github.com/nvim-pack/nvim-spectre"
+    },
     "nvim-treesitter": {
       "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
