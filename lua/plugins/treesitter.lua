@@ -1,11 +1,16 @@
-vim.pack.add({
-  {
-    src = "https://github.com/nvim-treesitter/nvim-treesitter",
-    version = "v0.10.0"
-  }
-})
+-- The plugin is added by plugins.util; install missing parsers only.
+local treesitter = require('nvim-treesitter')
+treesitter.setup({})
+treesitter.install({ 'markdown', 'markdown_inline', 'typescript', 'tsx', 'javascript' })
 
-require('nvim-treesitter').setup({})
+vim.api.nvim_create_autocmd('FileType', {
+  group = vim.api.nvim_create_augroup('code-highlighting', { clear = true }),
+  pattern = { 'typescript', 'typescriptreact', 'javascript', 'javascriptreact', 'markdown' },
+  callback = function(event)
+    -- Parsers may still be installing on the first startup.
+    pcall(vim.treesitter.start, event.buf)
+  end,
+})
 
 vim.api.nvim_create_autocmd('User', { pattern = 'TSUpdate',
 callback = function()

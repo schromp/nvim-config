@@ -12,8 +12,8 @@ require("snacks").setup({
     },
     sources = {
       explorer = {
-        hidden = "true",
-        ignored = "true"
+        hidden = true,
+        ignored = true
         -- your explorer picker configuration comes here
         -- or leave it empty to use the default settings
       }
@@ -22,6 +22,3 @@ require("snacks").setup({
 })
 
 vim.keymap.set("n", "<leader>e", function() require("snacks").explorer() end, { desc = "Snacks Explorer" })
-vim.keymap.set("n", "<leader>f", function () require("snacks").picker.files() end, { desc = "Open File Picker" })
-vim.keymap.set("n", "<leader>b", function () require("snacks").picker.buffers() end, { desc = "Open Buffer Picker" })
-vim.keymap.set("n", "<leader>/", function () require("snacks").picker.grep() end, { desc = "Open Grep Picker" })

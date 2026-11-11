@@ -4,12 +4,15 @@ vim.pack.add({
 	"https://github.com/kdheepak/monochrome.nvim",
 	"https://github.com/catppuccin/nvim",
 	"https://github.com/scottmckendry/cyberdream.nvim",
+  "https://github.com/navarasu/onedark.nvim",
+  "https://github.com/loctvl842/monokai-pro.nvim",
+  "https://github.com/datsfilipe/vesper.nvim",
 })
 
 require("rose-pine").setup({
-	styles = {
-		transparency = true,
-	},
+	-- styles = {
+	-- 	transparency = true,
+	-- },
 })
 
 require("catppuccin").setup({
@@ -17,4 +20,4 @@ require("catppuccin").setup({
 	transparent_background = false,
 })
 
-vim.cmd("colorscheme catppuccin-nvim")
+vim.cmd("colorscheme catppuccin")
