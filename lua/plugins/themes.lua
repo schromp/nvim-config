@@ -17,7 +17,7 @@ require("rose-pine").setup({
 
 require("catppuccin").setup({
 	flavour = "mocha",
-	transparent_background = false,
+	transparent_background = true,
 })
 
-vim.cmd("colorscheme catppuccin")
+vim.cmd("colorscheme catppuccin-nvim")
