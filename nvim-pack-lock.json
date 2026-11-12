@@ -137,8 +137,9 @@
       "src": "https://www.github.com/nvim-lua/plenary.nvim"
     },
     "project.nvim": {
-      "rev": "b7480ef3bdd4f851f94593cf98afb0f448a8168b",
-      "src": "https://github.com/DrKJeff16/project.nvim"
+      "rev": "e01e77eedb0a3a6fad730c41d5c09053dd697523",
+      "src": "https://github.com/DrKJeff16/project.nvim",
+      "version": "'e01e77eedb0a3a6fad730c41d5c09053dd697523'"
     },
     "render-markdown.nvim": {
       "rev": "d67113f11384c0dad96fced2f7b91f1fc811e97f",
